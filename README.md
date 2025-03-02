@@ -66,7 +66,7 @@ A backend application built with **Node.js** and **MongoDB**, designed to handle
 
 ### Public Routes (No Authentication Required)
 
-- **POST `/api/signup`**: Create a new user account.
+- **POST `/signup`**: Create a new user account.
   - Request body: 
 
     ```json
@@ -144,7 +144,7 @@ For routes like `/api/protected` and `/profile`, you need to include the JWT in 
 Here's how you can make a request from your frontend code:
 
 ```javascript
-fetch('http://localhost:5000/api/protected', {
+fetch('http://localhost:3000/api/protected', {
   method: 'GET',
   headers: {
     'Authorization': `Bearer ${yourJWTToken}`,
