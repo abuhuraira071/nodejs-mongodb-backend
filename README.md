@@ -1,10 +1,28 @@
 ---
 
 ![Node.js and MongoDB Backend](https://img.shields.io/badge/Node.js-MongoDB-blue.svg)
+![GitHub License](https://img.shields.io/github/license/abuhuraira071/nodejs-mongodb-backend)
+![GitHub Issues](https://img.shields.io/github/issues/abuhuraira071/nodejs-mongodb-backend)
 
 # Node.js and MongoDB Backend
 
 A backend application built with **Node.js** and **MongoDB**, designed to handle user authentication and management through a simple RESTful API. It supports user signup, login, and token-based authentication using **JSON Web Tokens (JWT)**. This project serves as the foundation for building scalable, data-driven web applications.
+
+---
+
+## 📑 Table of Contents
+- [Features](#-features)
+- [Getting Started](#-getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [API Endpoints](#-api-endpoints)
+  - [Public Routes](#public-routes-no-authentication-required)
+  - [Protected Routes](#protected-routes-requires-authentication)
+  - [Logout Route](#logout-route)
+- [Authentication with JWT](#-authentication-with-jwt)
+- [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
@@ -157,7 +175,40 @@ fetch('http://localhost:3000/api/protected', {
 
 ---
 
-## 🎯 Contributing
+<details>
+<summary><b>📁 Project Structure</b></summary>
+
+```
+backend/
+│
+├── database/
+│   └── db.js                    # MongoDB connection setup
+│
+├── models/
+│   └── User.js                  # User model schema for MongoDB
+│
+├── routes/
+│   └── route.js                 # API routes for handling requests
+│
+├── controllers/
+│   ├── signup.js                # Controller for user signup
+│   └── login.js                 # Controller for user login
+│
+├── tokenGeneration/
+│   └── generateToken.js         # JWT generation logic
+│
+├── middleware/
+│   └── authMiddleware.js        # Middleware for verifying JWT
+│
+├── .env                          # Environment variables for sensitive data
+├── index.js                      # Main server entry point
+└── package.json                  # Project dependencies and metadata
+```
+</details>
+
+---
+
+## 🤝 Contributing
 
 We welcome contributions! If you find any bugs or have suggestions for new features, feel free to create an issue or submit a pull request.
 
@@ -169,9 +220,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-### 📝 Updates Made:
-- Added `/api/protected` route in the **API Endpoints** section.
-- Explained how to include the **JWT token** in the `Authorization` header for protected routes.
-- Updated examples for using the JWT token in both Postman and frontend code.
+## 💖 Support
+
+If you find this project helpful, consider giving it a ⭐️ on GitHub!
 
 ---
