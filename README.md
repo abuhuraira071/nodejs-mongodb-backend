@@ -77,7 +77,7 @@ A backend application built with **Node.js** and **MongoDB**, designed to handle
     }
     ```
 
-- **POST `/api/login`**: Login with an existing user.
+- **POST `/login`**: Login with an existing user.
   - Request body: 
 
     ```json
